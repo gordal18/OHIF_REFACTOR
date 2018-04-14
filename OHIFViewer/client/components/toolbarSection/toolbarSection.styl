@@ -1,0 +1,181 @@
+@require '{ohif:design}/app'
+
+.toolbarSection
+  flex: 0 0 auto
+  height: $toolbarHeight
+  padding-top: 6px
+  position: relative!important
+  transition(height 300ms ease)
+  width: 100%
+  z-index:1!important
+  flex:0 0 auto;
+  padding-top:6px;
+  display:block
+  height:78px
+  &.expanded
+    height: $toolbarHeight + $toolbarDrawerHeight
+  .clearfix
+    position:relative
+
+@media only screen and (max-width:977px)
+  .toolbarSectionTools
+    .seperator
+      display:none!important
+@media (max-width:1480px) and (min-width:930px)
+  .toolbarSection
+    margin-top:30px
+
+@media (max-width:935px) and (min-width:900px)
+  #clearTools
+    display:none
+  #toggleAdvanced
+    #clearTools
+      display:inline-block
+
+@media (max-width:900px) and (min-width:860px)
+  #toggleAdvanced
+    .toolbarSectionDrawer
+      height:124px
+  #toggleAdvanced #space_angle
+    display: block!important
+  .toolbarSectionDrawerContainer
+    left:35%
+  #resetViewport, #clearTools
+    display:none
+  #toggleAdvanced #resetViewport,#toggleAdvanced #clearTools 
+    display:inline-block
+
+@media (max-width:860px) and (min-width:810px)
+  #toggleAdvanced
+    .toolbarSectionDrawer
+      height:124px
+  #toggleAdvanced #space_angle
+    display: block!important
+  .toolbarSectionDrawerContainer
+    left:25%
+  #overlay,#resetViewport,#clearTools
+    display:none
+  #toggleAdvanced #overlay, #toggleAdvanced #resetViewport,#toggleAdvanced #clearTools
+    display: inline-block
+
+@media (max-width:810px) and (min-width:775px)
+  #toggleAdvanced
+    .toolbarSectionDrawer
+      height:124px
+  #toggleAdvanced #space_angle
+    display: block!important
+
+  #toggleCineDialog,#overlay,#resetViewport,#clearTools
+    display: none
+  #toggleAdvanced #toggleCineDialog, #toggleAdvanced #overlay,
+  #toggleAdvanced #resetViewport,#toggleAdvanced #clearTools
+    display: inline-block  
+
+@media (max-width:775px) and (min-width:700px)
+  #toggleAdvanced
+    .toolbarSectionDrawer
+      height:124px
+  #toggleAdvanced #space_angle
+    display: block!important
+  #toggleReportDialog,#toggleCineDialog,#overlay,#resetViewport,#clearTools
+    display: none
+  #toggleAdvanced #toggleReportDialog,#toggleAdvanced #toggleCineDialog,#toggleAdvanced #overlay,
+  #toggleAdvanced #resetViewport,#toggleAdvanced #clearTools
+    display: inline-block
+
+@media (max-width:700px) and (min-width:655px)
+    #toggleAdvanced
+      .toolbarSectionDrawer
+        height:124px
+    #toggleAdvanced #space_angle
+      display: block!important
+    #export_file,#toggleReportDialog,#toggleCineDialog,#overlay,#resetViewport,#clearTools
+      display: none
+
+    #toggleAdvanced #export_file,
+    #toggleAdvanced #toggleReportDialog,
+    #toggleAdvanced #toggleCineDialog,
+    #toggleAdvanced #overlay,
+    #toggleAdvanced #resetViewport,
+    #toggleAdvanced #clearTools
+      display: inline-block
+
+@media (max-width:655px) and (min-width:612px)
+    #toggleAdvanced
+      .toolbarSectionDrawer
+        height:124px
+    #toggleAdvanced #space_angle
+      display: block!important
+    #toggleShareDialog,#export_file,#toggleReportDialog,#toggleCineDialog,#overlay,#clearTools,#resetViewport
+      display: none
+    
+    #toggleAdvanced #toggleShareDialog,
+    #toggleAdvanced #export_file,
+    #toggleAdvanced #toggleReportDialog,
+    #toggleAdvanced #toggleCineDialog,
+    #toggleAdvanced #overlay,
+    #toggleAdvanced #resetViewport,
+    #toggleAdvanced #clearTools
+      display: inline-block;  
+
+@media only screen and (max-width:612px)
+    #toggleAdvanced #space_angle,
+    #toggleAdvanced #space_lung
+      display: block!important    
+
+    .toolbarSectionTools 
+      padding-bottom: 0px!important
+    .toolbarSectionButton 
+      padding-bottom: 10px
+    .toolbarSectionDrawer 
+      overflow-x: auto   
+    #length,#annotate,#magnify,#layout,#export_file,#clearTools,#filter,#overlay,#resetViewport
+      display: none;
+    #toggleAdvanced
+      .toolbarSectionDrawer
+        height:186px
+    #toggleAdvanced #length, 
+    #toggleAdvanced #annotate, 
+    #toggleAdvanced #magnify, 
+    #toggleAdvanced #layout,
+    #toggleAdvanced #clearTools,
+    #toggleAdvanced #abdomen,
+    #toggleAdvanced #brain,
+    #toggleAdvanced #bone,
+    #toggleAdvanced #lung,
+    #toggleAdvanced #toggleShareDialog,
+    #toggleAdvanced #export_file
+      display: inline-block
+
+@media only screen and (max-width:500px)
+    #toggleCineDialog
+      display: none;
+    #toggleAdvanced #toggleCineDialog
+      display: inline-block
+@media only screen and (max-width:450px)
+    #toggleAdvanced #space_angle,
+    #toggleAdvanced #space_lung
+      display: block!important 
+    #toggleShareDialog,#toggleReportDialog
+      display: none
+    #toggleAdvanced
+      .toolbarSectionDrawer
+        height:186px
+    #toggleAdvanced #length, 
+    #toggleAdvanced #annotate, 
+    #toggleAdvanced #magnify, 
+    #toggleAdvanced #layout,
+    #toggleAdvanced #clearTools,
+    #toggleAdvanced #abdomen,
+    #toggleAdvanced #brain,
+    #toggleAdvanced #bone,
+    #toggleAdvanced #lung,
+    #toggleAdvanced #toggleShareDialog,
+    #toggleAdvanced #export_file
+    #toggleAdvanced #toggleShareDialog,
+    #toggleAdvanced #toggleReportDialog
+      display: inline-block
+@media only screen and (max-width:380px)
+    .toolbarSectionButton 
+      .buttonLabel
+        font-size:11px
